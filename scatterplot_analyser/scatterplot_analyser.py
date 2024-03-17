@@ -5,9 +5,10 @@ The user is asked how many variables are included (eg 3)
 The script then asks for the names (eg colours, sizes, weights)
 The user has the choice of reversing the variables for the y axis
 
-The output is a tabular view giving a unique id to each plot within the scatterplot
+The output is a tabular view giving a unique id to each plot within a
+scatterplot.
 
-Followed by an text description of each plot pair
+Followed by a text description of each plot pair
 
 And an indication of whether its the first unique combination of that pair 
 or whether its a distribution
@@ -15,7 +16,7 @@ first instance of unique pairs is coloured red
 distribution (identity pairs) are coloured green
 and non unique pairs (second instances of pairs) are coloured white
 
-basically its to help the user talk to themselves about plot pairs to retain
+Basically its to help the user "talk to themselves" about plot pairs to retain
 understanding - espeically when there are higher numbers of variables.
 
 '''
@@ -53,7 +54,8 @@ for j, v2 in enumerate(secondary_list):
         tid = j * var_count + i + 1  # Calculate the ID
         if v1 == v2:
             combination_type = "Distribution"
-        elif (v1, v2) not in seen_combinations and (v2, v1) not in seen_combinations:
+        elif ((v1, v2) not in seen_combinations and
+              (v2, v1) not in seen_combinations):
             combination_type = "Unique"
             seen_combinations.add((v1, v2))
             seen_combinations.add((v2, v1))
@@ -72,8 +74,11 @@ for j, v2 in enumerate(secondary_list):
 for combo in combinations:
     tid, v1, v2, combo_type, pair_tid = combo
     if combo_type == "Unique":
-        print(f"\033[91m{tid}: {v1} vs {v2} - {combo_type} (Pair: {pair_tid})\033[0m")  # Red color for Unique
+        print(f"\033[91m{tid}: {v1} vs {v2} - {combo_type}"
+              f"(Pair: {pair_tid})\033[0m")  # Red color for Unique
     elif combo_type == "Distribution":
-        print(f"\033[92m{tid}: {v1} vs {v2} - {combo_type} (Pair: {pair_tid})\033[0m")  # Green color for Distribution
+        print(f"\033[92m{tid}: {v1} vs {v2} - {combo_type}"
+              f"(Pair: {pair_tid})\033[0m")  # Green color for Distribution
     else:
-        print(f"{tid}: {v1} vs {v2} - {combo_type} (Pair: {pair_tid})")  # Default color for others
+        print(f"{tid}: {v1} vs {v2} - {combo_type}"
+              f"(Pair: {pair_tid})")  # Default color for others
