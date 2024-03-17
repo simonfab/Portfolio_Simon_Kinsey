@@ -1,68 +1,8 @@
-'''Task 05 - Capstone Project - finance calcuators
+''' Initial capstone project for Hyperion course
+    Some simple functions and calculations around interest and repayments
 
-Student details:
-#student_name = "Simon Kinsey" 
-#student_number = "SK23110011962"
-
-Notes:
-    Since receiving the feedback on task 1 re line lenths i have amended some of
-    the lines so that they are less than the limit per pylint
-
-Pseudo code
-import libraries
-    math
-
-define functions:
-    print message
-        this was supposed to be standard function for 
-        printing calculated message but in the end most
-        printing was done in line
-    validate_integers 
-        a standard routine that checks entry for valid integer in this case greater than 0
-    validate_floats
-        a standard routine that checks entry for valid float in this case greater than 0
-    bond_calculation
-        p = pv of house; im = monthly interest rate and n = no of months
-        basic forumla = repayment = (i*p)/(1-(1+i)**(-n))
-        returns monthly repayment
-    interest_calculations
-        does both simple and compound calculations
-        takes deposit, interest rate and period to save
-        simple interest calculator - basic forumla = A = P*(1+r*t)
-        compound interest calculator - basic forumla = A=P*math.pow(((1+r),t)
-        returns total amount returned and interest earned (4 outputs)
-
-    get choice (main loop)
-        validate for valid string lower case and shorten
-        q/quit ends
-        i/investment for savings
-        b/bond for bond
-
-        if investment:
-            ask for inputs of 
-                amount to deposit (int) and validate
-                rate of interest (float) and validate
-                no of years to invest (float) and validate
-            run the calcs
-            ask the user what they want to see
-                simple/s
-                    show simple int results
-                compound/c
-                    show compount interest results
-            if bond:
-            ask for inputs of
-                house value (int) and validate
-                rate of interest (float) and validate
-                number of months to repay (int) and validate
-                do the calculations using the defined function and calculate return messages
-                offer a comparison option
-                    does the user want to see the effect of a 1% increase in interest rates
-                        if yes
-                            calculate new interest rates
-                            re-run function
-                            show a message that shows increase in costs
-    print messages
-    end'''
+    NB I have left the pseudo code in at the end
+'''
 
 # Import libraries
 import math
