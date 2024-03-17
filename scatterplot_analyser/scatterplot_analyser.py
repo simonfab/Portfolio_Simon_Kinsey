@@ -1,3 +1,24 @@
+'''
+Scatterplot analyser is just to assist understand the graphs that are output
+from matplotlib.
+The user is asked how many variables are included (eg 3)
+The script then asks for the names (eg colours, sizes, weights)
+The user has the choice of reversing the variables for the y axis
+
+The output is a tabular view giving a unique id to each plot within the scatterplot
+
+Followed by an text description of each plot pair
+
+And an indication of whether its the first unique combination of that pair 
+or whether its a distribution
+first instance of unique pairs is coloured red
+distribution (identity pairs) are coloured green
+and non unique pairs (second instances of pairs) are coloured white
+
+basically its to help the user talk to themselves about plot pairs to retain
+understanding - espeically when there are higher numbers of variables.
+
+'''
 var_count = input("Please enter the number of variables...\n")
 var_count = int(var_count)
 
