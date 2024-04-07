@@ -82,5 +82,4 @@ for combo in combinations:
     else:
         print(f"{tid}: {v1} vs {v2} - {combo_type}"
               f"(Pair: {pair_tid})")  # Default color for others
-        
-print("test")
+
