@@ -28,4 +28,4 @@ if vscode_workspace_path:
     print(f"The virtual environment is part of the VSCode workspace: {vscode_workspace_path}")
 else:
     print("The virtual environment is not part of a VSCode workspace")
-print("test in office 17")
+print("test in office 21")
